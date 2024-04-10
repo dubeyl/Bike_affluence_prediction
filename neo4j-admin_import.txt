@@ -1,1 +1,1 @@
-bin\neo4j-admin database import full --nodes /import/2023_nodes_header.csv,/import/2023_nodes.csv --relationships /import/2023_edges_header.csv,/import/2023_edges.csv
+bin\neo4j-admin database import full --nodes import/2023_nodes_header.csv,import/2023_nodes.csv --relationships import/2023_edges_header.csv,import/2023_edges.csv
