@@ -1,0 +1,17 @@
+﻿MATCH ()-[r]-() 
+WHERE r.start_date IS NOT NULL 
+WITH datetime(r.start_date).month AS month
+RETURN month, COUNT(*) AS travelCount
+
+
+month,travelCount
+8,3643524
+9,3772288
+10,2850217
+7,3555987
+12,187018
+11,1281844
+1,775
+6,3268390
+5,3073582
+4,1279205
