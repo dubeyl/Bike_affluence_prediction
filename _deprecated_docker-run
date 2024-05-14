@@ -1,0 +1,3 @@
+docker run --publish=7474:7474 --publish=7687:7687 --volume=D:/neo4j/data:/data --volume=D:/neo4j/import:/import --env=NEO4J_AUTH=none neo4j
+
+sudo docker run --publish=7474:7474 --publish=7687:7687 --volume=$HOME/neo4j/data:/data --volume=$HOME/neo4j/import:/import --env=NEO4J_AUTH=none neo4j
