@@ -20,6 +20,9 @@ def haversine(lat1, lon1, lat2, lon2):
     r = 6371  # Radius of earth in kilometers. Use 3956 for miles
     return c * r * 1000 # to have the distance in meters
 
+
+
+# IT DOES NOT WORK :'(
 class GWR:
     def __init__(self, bandwidth=1.0):
         self.bandwidth = bandwidth
@@ -53,7 +56,7 @@ if __name__ == "__main__":
     df_edges = pd.read_csv('../Data/2023_edges_extended.csv', header=None)
     df_edges.columns = columns
     
-    feature_columns = [':START_ID', 'month', 'day', 'hour', 'conditions', 'temperature', 'wind_speed'] # features
+    feature_columns = [':START_ID', 'month', 'day', 'hour', 'conditions', 'temperature', 'wind_speed', 'good_weather'] # features
     target_column = 'n'  # target
     coordinate_columns = ['start_latitude', 'start_longitude']  # coordinates
 
