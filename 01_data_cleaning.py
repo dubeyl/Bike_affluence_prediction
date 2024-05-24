@@ -2,16 +2,14 @@ import numpy as np
 import pandas as pd
 import os
 
-# Read the first dataset
 
 def data_clean_year(year):
-    stations = pd.read_csv(f'./data/original/{year}_stations.csv')
+    stations = pd.read_csv(f'../Data/original/{year}_stations.csv')
 
-    # Read and merge other datasets
     datasets = []
     for month in range(0, 13):
         month = '{:02d}'.format(month)
-        file_name = f'./data/original/{year}-{month}_opendata.csv'
+        file_name = f'../Data/original/{year}-{month}_opendata.csv'
         if os.path.exists(file_name):
             dataset = pd.read_csv(file_name)
             dataset = pd.merge(dataset, stations, left_on='start_station_code', right_on='code', how='left')
@@ -41,17 +39,10 @@ def data_clean_year(year):
 
             datasets.append(dataset)
 
-    # Concatenate all datasets
     final_dataset = pd.concat(datasets, ignore_index=True)
-
-    # Optionally, you can drop duplicate rows if any
     final_dataset.drop_duplicates(inplace=True)
-
-    # Optionally, you can sort the final dataset by any column
     final_dataset.sort_values(by='STARTTIMEMS', inplace=True)
-
-    # Save the final dataset to a CSV file
-    final_dataset.to_csv(f'./data/{year}.csv', index=False)
+    final_dataset.to_csv(f'../Data/{year}.csv', index=False)
 
 for i in range(14, 22):
     print(f'20{i} starts')
