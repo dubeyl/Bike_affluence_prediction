@@ -58,11 +58,21 @@ Your project should have the following structure:
         * 2023_nodes_header.csv
         * 2024_0102.csv
         * distances_df.csv
+        * original
+            * 2014_stations.csv
+            * 2014-04_opendata.csv
+            * 2014-05_opendata.csv
+            ... (lot of files)
+            * 2021-00_opendata.csv
+            * 2022.csv
+            * 2023.csv
+            * 2024_0102.csv
 
 
 You can download the required dataset at one of the following location:
-* https://gofile.me/4lFtV/Uxl0PJJ0k (available until the end of August 2024)
-* Kaggle Link follows as soon as the files are uploaded
+* https://gofile.me/4lFtV/Uxl0PJJ0k (with original, available until the end of August 2024)
+* [Kaggle SMA Bixi](https://kaggle.com/datasets/1064fa190a636f6dbd2020dfa6de620acfe1754299e56cdec865ee1d08a27994) (without original)
+* Original data only: https://bixi.com/en/open-data/
 
 !!! The datasets are large. You might want to focus only on some of them according to the scripts you want to use.
 
