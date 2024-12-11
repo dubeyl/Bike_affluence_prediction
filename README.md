@@ -79,6 +79,6 @@ You can download the required dataset at one of the following location:
 ## Contact
 
 If you may have difficulties running the provided script or any other question, you can contact the authors at:
-* leandre.dubey@unifr.ch
+* leandre.dubey@gmail.com
 * louis.chaubert@students.unibe.ch
 
